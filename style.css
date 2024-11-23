@@ -1,0 +1,209 @@
+/*
+Theme Name: Work Encyclopedia
+Theme URI: https://chizaizukan.com
+Author: Work Encyclopedia Team
+Author URI: https://chizaizukan.com
+Description: A modern theme for the Work Encyclopedia platform, featuring a clean design focused on textile and intellectual property content.
+Version: 1.0.0
+Requires at least: 5.9
+Tested up to: 6.4
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: work-encyclopedia
+Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-patterns, block-styles, wide-blocks, accessibility-ready
+
+This theme is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/* Base Styles */
+:root {
+  --primary-color: #3b82f6;
+  --secondary-color: #1e40af;
+  --text-color: #1f2937;
+  --light-gray: #f3f4f6;
+  --border-color: #e5e7eb;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Links */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+/* Layout */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Header */
+.site-header {
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 1rem 0;
+}
+
+/* Navigation */
+.main-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Content */
+.site-content {
+  padding: 2rem 0;
+}
+
+/* Footer */
+.site-footer {
+  background: var(--light-gray);
+  padding: 2rem 0;
+  margin-top: 2rem;
+}
+
+/* WordPress Core Classes */
+.alignnone {
+  margin: 5px 20px 20px 0;
+}
+
+.aligncenter {
+  display: block;
+  margin: 5px auto 5px auto;
+}
+
+.alignright {
+  float: right;
+  margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0;
+}
+
+.wp-caption {
+  background: #fff;
+  border: 1px solid var(--border-color);
+  max-width: 96%;
+  padding: 5px 3px 10px;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.wp-caption img {
+  border: 0 none;
+  height: auto;
+  margin: 0;
+  max-width: 98.5%;
+  padding: 0;
+  width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+  font-size: 11px;
+  line-height: 17px;
+  margin: 0;
+  padding: 0 4px 5px;
+}
+
+/* Accessibility */
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  clip-path: none;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+}
+
+/* Block Editor Styles */
+.wp-block-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.wp-block-gallery {
+  margin: 0;
+  padding: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+  
+  .site-content {
+    padding: 1rem 0;
+  }
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background: none !important;
+    color: #000;
+    font-size: 12pt;
+  }
+  
+  a {
+    color: #000 !important;
+    text-decoration: underline;
+  }
+  
+  .site-header,
+  .site-footer,
+  .navigation {
+    display: none;
+  }
+}
